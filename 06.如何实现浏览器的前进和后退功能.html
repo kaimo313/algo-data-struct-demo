@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06.如何实现浏览器的前进和后退功能</title>
+</head>
+<body>
+    <script type="module">
+        import { SampleBrowser } from "./js/06/SampleBrowser.js";
+        const browser = new SampleBrowser()
+        browser.pushNormal("A页面")
+        browser.pushNormal("B页面")
+        browser.pushNormal("C页面")
+        console.log(browser)
+        browser.displayAllStack()
+        console.log("-------------------------------------")
+        browser.back()
+        browser.back()
+        browser.front()
+        browser.displayAllStack()
+        console.log("-------------------------------------")
+        browser.pushNormal("N页面")
+        browser.displayAllStack()
+    </script>
+</body>
+</html>
