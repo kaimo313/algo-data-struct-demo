@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>07.基于链表实现的循环队列</title>
+    </head>
+    <body>
+        <script type="module">
+            import { CircularQueue } from "./js/07/CircularQueue.js";
+
+            const newCircularQueue = new CircularQueue();
+            // 插入元素
+            newCircularQueue.enqueue(1);
+            newCircularQueue.enqueue(2);
+            newCircularQueue.enqueue(3);
+            console.log(newCircularQueue);
+            // 获取元素
+            newCircularQueue.display();
+            newCircularQueue.enqueue(1);
+            newCircularQueue.display();
+        </script>
+    </body>
+</html>
